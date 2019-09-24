@@ -3,6 +3,7 @@
 
 1.获取元素的方法有哪些?并简单描述该方法.
 答:用选择器获取元素 
+   用id获取元素:getElementById()
    用类名获取元素:document.getElementsByClassName();  
    用标签名获取元素:document.getElementsByTagName();
 
