@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>模拟取款机</title>
+     <style></style>
+</head>
+<body>
+   <button id="btn">点击取款</button>
+     <script>
+         var ant = '123456789';
+		 var prd = '123456';
+		 var money = 10000;
+         do{
+	         var op=prompt('请输入您的账号');
+	          if (op==ant) {
+	    	    do{
+	          	 var op1=prompt('请输入您的密码');
+	             if (op1==prd) {
+	          	    alert('您的余额还有10000元');
+	          	var take=Number(prompt('请输入您要取走的金额'));
+	          	  if (take>money) {
+	          	  	  alert('您的余额不足');
+	          	  } else if(take<=money){
+	          	  	  alert('您的余额还有'+(money-take));
+	          	  }
+	          	 } else{
+	          	 	alert('您的密码错误，请重新输入')
+	          	 }
+	          	}while (op1!=prd)
+	          } else{
+	          	alert('您的账号错误，请重新输入')
+	          }
+			}while(ant!=op)
+     </script>
+</body>
+<html>
