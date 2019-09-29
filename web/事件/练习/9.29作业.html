@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <style></style>
+</head>
+<body>
+    用户名:<input type="text" id="in1">
+    <span id="p1"></span><br>
+    密码:<input type="password" id="in2">
+     <span id="p2"></span><br>
+     <button id="btn">提交</button><br>
+     <script>
+       var in1 = document.getElementById('in1');
+       var in2 = document.getElementById('in2');
+       var p1=document.getElementById('p1');
+       var p2=document.getElementById('p2');
+       var btn=document.getElementById('btn');
+       var arr=['tom','jack','lili'];
+         
+       in1.onblur=function(){
+          if(arr.indexOf(in1.value)!=-1){
+			p1.innerHTML="用户名已被注册";
+		} else if (in1.value=='') {
+			p1.innerHTML="用户名不可为空";
+		}else{
+			   p1.innerHTML="用户名可用";
+		}            
+
+       }
+       in1.onfocus=function(){
+		if(arr.indexOf(in1.value)!=-1){
+		    p1.innerHTML="用户名已被注册";
+		 }else{
+		     p1.innerHTML="请输入用户名";
+		 }                
+	  }
+        in2.onfocus=function(){
+            p2.innerHTML="请输入密码";
+        }
+        in2.onblur=function(){
+            if (in2.value=='') {
+                p2.innerHTML="密码不可为空";
+            }else{
+                p2.innerHTML="";
+            }
+        }
+        btn.onclick=function(){
+		if (in1.value==''&&in2.value=='') {
+			alert('用户名和密码不可为空');			    
+		}else if (in1.value=='') {
+                alert('用户名不可为空');
+          } else if (in2.value=='') {
+                alert('密码不可为空');
+          }else if (arr.indexOf(in1.value)!=-1) {
+                alert('用户名已被注册');
+          }else{
+				alert('注册成功')
+			}
+        }
+
+
+     </script>
+</body>
+</html>
