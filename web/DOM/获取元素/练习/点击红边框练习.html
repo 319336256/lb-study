@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <style>
+       .a{
+           width: 200px;
+           height: 200px;
+       }
+       .b{
+         border: 1px solid red;
+       }
+       .c{
+        border: 1px solid blue;
+       }
+     </style>
+    
+</head>
+<body>
+     <button id="nt">按钮</button>
+    <div id="mydiv" class="a b "></div>
+     <script>
+         var div = document.getElementById('mydiv');
+         console.log(div.className);
+         nt.onclick=function(){
+            div.className ='a c';
+         }
+         
+     </script>
+</body>
+</html>
