@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <input  type="date" id="d">
+    <script>
+        var d =document.getElementById('d');
+        var nw = confirm('女王请点确定');
+
+        d.oninput = function (){
+           // d.value == '2019-03-08' && nw ? alert('5折'):alert('不打折');
+           if(nw && d.value== '2019-03-08'){
+              alert('打五折');
+           }else{
+              alert('无优惠');
+           }
+        }
+    </script>
+      </script>
+    </body>
+</html>
